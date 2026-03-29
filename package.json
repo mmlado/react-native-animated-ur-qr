@@ -1,0 +1,66 @@
+{
+  "name": "react-native-animated-ur-qr",
+  "version": "0.1.0",
+  "description": "Animated BC-UR QR code component and hook for React Native",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepare": "npm run build",
+    "test": "jest",
+    "lint": "eslint src",
+    "format": "prettier --write src"
+  },
+  "keywords": [
+    "react-native",
+    "qr",
+    "qrcode",
+    "bc-ur",
+    "animated",
+    "ur",
+    "bitcoin",
+    "ethereum",
+    "airgap",
+    "keystone"
+  ],
+  "author": "mmlado",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmlado/react-native-animated-ur-qr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmlado/react-native-animated-ur-qr/issues"
+  },
+  "homepage": "https://github.com/mmlado/react-native-animated-ur-qr#readme",
+  "peerDependencies": {
+    "@ngraveio/bc-ur": ">=1.0.0",
+    "react": ">=18.0.0",
+    "react-native": ">=0.70.0",
+    "react-native-qrcode-svg": ">=6.0.0"
+  },
+  "devDependencies": {
+    "@ngraveio/bc-ur": "^1.1.13",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/react-native": "^13.3.3",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.2.14",
+    "@types/react-native": "^0.72.8",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
+    "@typescript-eslint/parser": "^8.57.2",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "prettier": "^3.8.1",
+    "react-native-qrcode-svg": "^6.3.21",
+    "react-test-renderer": "^19.2.4",
+    "ts-jest": "^29.4.6",
+    "tsup": "^8.5.1",
+    "typescript": "^5.8.3"
+  }
+}
