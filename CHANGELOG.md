@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-03-30
+
+### Fixed
+- Switch CI publish workflow to Trusted Publishing (OIDC) — no npm token required
+
 ## [0.1.0] - 2026-03-29
 
 ### Added
@@ -16,5 +21,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable `interval` (ms) and `capacity` (fragment size) props
 - Full TypeScript support
 
-[Unreleased]: https://github.com/mmlado/react-native-animated-ur-qr/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/mmlado/react-native-animated-ur-qr/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/mmlado/react-native-animated-ur-qr/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/mmlado/react-native-animated-ur-qr/releases/tag/v0.1.0
