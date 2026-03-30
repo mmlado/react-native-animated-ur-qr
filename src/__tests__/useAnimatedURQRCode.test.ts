@@ -63,6 +63,16 @@ describe('useAnimatedURQRCode', () => {
     );
   });
 
+  it('returns empty string when cbor is empty', () => {
+    const { result } = renderHook(() => useAnimatedURQRCode('', ''));
+    expect(result.current).toBe('');
+  });
+
+  it('returns empty string when type is empty', () => {
+    const { result } = renderHook(() => useAnimatedURQRCode(SINGLE_FRAGMENT_CBOR, ''));
+    expect(result.current).toBe('');
+  });
+
   it('clears the interval on unmount', () => {
     const clearIntervalSpy = jest.spyOn(global, 'clearInterval');
     const { unmount } = renderHook(() =>

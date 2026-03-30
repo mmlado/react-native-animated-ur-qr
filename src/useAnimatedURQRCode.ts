@@ -16,17 +16,24 @@ export function useAnimatedURQRCode(
   type: string,
   { capacity = MAX_FRAGMENT_LENGTH, interval = DEFAULT_INTERVAL }: UseAnimatedURQRCodeOptions = {},
 ): string {
-  const urEncoder = useMemo(
-    () => new UREncoder(new UR(Buffer.from(cbor, 'hex'), type), capacity),
-    [cbor, type, capacity],
+  const urEncoder = useMemo(() => {
+    if (!cbor || !type) {
+      return null;
+    }
+    return new UREncoder(new UR(Buffer.from(cbor, 'hex'), type), capacity);
+  }, [cbor, type, capacity]);
+
+  const [currentFragment, setCurrentFragment] = useState(() =>
+    urEncoder ? urEncoder.nextPart().toUpperCase() : '',
   );
-  const [currentFragment, setCurrentFragment] = useState(() => urEncoder.nextPart().toUpperCase());
+
   useEffect(() => {
-    if (urEncoder.fragmentsLength === 1) {
+    if (!urEncoder || urEncoder.fragmentsLength === 1) {
       return;
     }
     const id = setInterval(() => setCurrentFragment(urEncoder.nextPart().toUpperCase()), interval);
     return () => clearInterval(id);
   }, [urEncoder, interval]);
+
   return currentFragment;
 }

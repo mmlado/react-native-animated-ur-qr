@@ -42,7 +42,7 @@ export default function AnimatedURQRCode({
   return (
     <View style={[styles.wrapper, { backgroundColor, width: size + 24, height: size + 24 }]}>
       <QRCode
-        value={parsed ? fragment : urString}
+        value={fragment || urString}
         size={size}
         color={color}
         backgroundColor={backgroundColor}
