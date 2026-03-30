@@ -1,6 +1,6 @@
 {
   "name": "react-native-animated-ur-qr",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Animated BC-UR QR code component and hook for React Native",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

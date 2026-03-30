@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { UR, UREncoder } from '@ngraveio/bc-ur';
 
-const MAX_FRAGMENT_LENGTH = 400;
+const MAX_FRAGMENT_LENGTH = 200;
 const DEFAULT_INTERVAL = 200;
 
 export interface UseAnimatedURQRCodeOptions {
