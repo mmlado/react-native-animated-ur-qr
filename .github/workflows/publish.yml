@@ -19,10 +19,10 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      - name: Update npm
+        run: npm install -g npm@latest
 
-      - name: Configure npm registry
-        run: npm config set registry https://registry.npmjs.org
+      - run: npm ci
 
       - name: Prettier
         run: npx prettier --check src
