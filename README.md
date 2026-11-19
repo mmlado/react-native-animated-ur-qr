@@ -36,6 +36,8 @@ import AnimatedURQRCode from 'react-native-animated-ur-qr';
 
 Single-fragment URs are displayed statically — no unnecessary animation.
 
+The quiet zone, four light modules on every side, is part of the SVG, so a system dark mode that recolors views cannot remove it.
+
 ### Hook (bring your own renderer)
 
 Use `useAnimatedURQRCode` if you want to control the QR rendering yourself:
@@ -57,11 +59,11 @@ function MyQR({ cbor, type }: { cbor: string; type: string }) {
 | Prop | Type | Default | Description |
 |---|---|---|---|
 | `urString` | `string` | required | A valid UR string (`ur:type/...`) |
-| `size` | `number` | required | QR code size in pixels |
+| `size` | `number` | required | The component is `size + 24` pixels square; the code and its quiet zone fill it |
 | `color` | `string` | `#000000` | QR code foreground color |
 | `backgroundColor` | `string` | `#ffffff` | QR code background color |
 | `interval` | `number` | `200` | Frame duration in milliseconds |
-| `capacity` | `number` | `400` | Max fragment size in bytes |
+| `capacity` | `number` | `200` | Max fragment size in bytes |
 
 ### `useAnimatedURQRCode(cbor, type, options?)`
 
@@ -70,7 +72,7 @@ function MyQR({ cbor, type }: { cbor: string; type: string }) {
 | `cbor` | `string` | CBOR payload as a hex string |
 | `type` | `string` | UR type (e.g. `crypto-psbt`, `eth-sign-request`) |
 | `options.interval` | `number` | Frame duration in milliseconds (default: `200`) |
-| `options.capacity` | `number` | Max fragment size in bytes (default: `400`) |
+| `options.capacity` | `number` | Max fragment size in bytes (default: `200`) |
 
 Returns the current UR fragment string to render as a QR code.
 
