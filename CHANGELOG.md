@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Draw the quiet zone, four modules wide, inside the QR code's SVG instead of as the wrapper's background, which a system dark mode can recolor
+- Pin npm 11 in the publish workflow: npm 12 no longer runs on Node 20
 
 ## [0.1.5] - 2026-03-30
 
